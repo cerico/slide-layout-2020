@@ -3,24 +3,24 @@ New Layout
 
 https://slide-layout.netlify.app/
 
-##What is it?
+## What is it?
 
 A layout. Html, css, and a couple of lines of js. Uses Sergey as an SSG to allow partials
 
-##To run
+## To run
 
 ```
 npm install
 npm run dev
 ```
 
-##To build 
+## To build 
 
 ```
 npm run build
 ```
 
-###Deploys
+### Deploys
 
 to netlify
 
