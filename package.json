@@ -1,0 +1,16 @@
+{
+  "name": "branches.io37.ch",
+  "version": "1.0.0",
+  "description": "branches.io37.ch",
+  "main": "server.js",
+  "dependencies": {
+    "sergey": "0.0.13"
+  },
+  "scripts": {
+    "dev": "sergey --watch",
+    "build": "sergey",
+    "netlify": "netlify deploy --prod -d public"
+  },
+  "author": "gareth",
+  "license": "ISC"
+}
