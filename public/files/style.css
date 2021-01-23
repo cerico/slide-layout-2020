@@ -4,43 +4,17 @@ body {
   margin: 0;
 }
 
-.button-one {
-  left: 0;
-  width: 33.3%;
-  top: -48px;
+.tabs {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  z-index: 2;
+  padding: 75px 0 48px;
 }
 
-.button-two {
-  left: 33.3%;
-  width: 33.3%;
-  top: -48px;
-}
-
-.button-three {
-  top: -48px;
-  width: 33.4%;
-  right: 0;
-}
-
-.tab-button {
-  position: absolute;
-  height: 48px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  z-index: 3;
-  font-family: "Open Sans";
-}
-
-.tab-content {
-  margin: 40px;
-  padding: 24px;
-  margin-right: 80px;
-  margin-top: 0px;
-  padding-top: 0px;
+main {
+  margin: 0px;
+  padding: 0px;
 }
 * {
   box-sizing: border-box;
@@ -50,38 +24,20 @@ body {
   display: none;
 }
 
-.todmorden {
-  background-color: #516548;
-  color: white;
-}
-
-.preston {
-  color: #516548;
-  background-color: #f3f7e9;
-}
-
-.huddersfield {
-  background: #7fafc5;
-  color: #303540;
-}
-
 .h2 {
   width: 100%;
-  margin-bottom: 25px;
   font-family: "Raleway";
   font-size: 25px;
   line-height: 120%;
   font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin: 20px 0px 10px 0px;
 }
 
-.tab-wrapper {
+.wrapper {
   display: flex;
 }
 
 .fixed-left {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 50%;
@@ -100,6 +56,10 @@ body {
   letter-spacing: 2.6px;
 }
 
+.tan .scrolling-right {
+  border-color: #516548;
+}
+
 .scrolling-right {
   height: 100%;
   position: relative;
@@ -109,37 +69,62 @@ body {
   border-color: #fff;
   font-weight: 300;
 }
-
-.preston .scrolling-right {
-  border-color: #516548;
-}
-
-.scrolling-content {
+.scrolling-right .content {
   width: 100%;
   height: 100%;
   padding: 0 40px;
 }
-
-.scrolling-text {
+.scrolling-right .text {
   max-width: 600px;
   margin-top: 104px;
   margin-right: 0;
 }
-
-.scrolling-p {
+.scrolling-right p {
   width: 100%;
   margin-bottom: 20px;
   font-family: "Open Sans";
   font-size: 18px;
   line-height: 24px;
 }
+.blue {
+  background: #7fafc5;
+  color: #303540;
+}
 
+.tan {
+  background: #f3f7e9;
+  color: #516548;
+}
+
+.green {
+  background: #516548;
+  color: #f3f7e9;
+}
+
+.button-two {
+  left: 33.3%;
+}
+
+.button-three {
+  right: 0;
+}
+
+.button {
+  position: absolute;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  width: 33.3%;
+  top: -48px;
+  background: inherit;
+}
+.button span {
+  font-family: "Open Sans";
+}
 @media only screen and (min-width: 768px) {
-  .tab-two-in-view {
-    transform: translateX(-100%) !important;
-  }
-
-  .tab-three-in-view {
+  .in-view {
     transform: translateX(-100%) !important;
   }
 
@@ -148,50 +133,45 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
+    left: 100%;
+  }
+
+  main {
+    padding: 0px 24px 24px 24px;
+    margin: 0px 80px 40px 40px;
+  }
+
+  .tab-one {
+    transform: translateX(-100%);
+    width: 100vw;
   }
 
   .tab-two {
     transform: translateX(-80px);
-    left: 100%;
-    background-color: #322F7C;
-    left: 100%;
     width: calc(100vw - 40px);
   }
 
   .tab-three {
     transform: translateX(-40px);
-    left: 100%;
-    background-color: #322F7C;
-    left: 100%;
     width: calc(100vw - 80px);
   }
 
-  .tab-one {
-    transform: translateX(-100%);
-    left: 100%;
-    width: 100vw;
+  .overlay {
+    height: 100%;
   }
-
-  .tab-button {
+  .button {
     height: 100%;
     width: 40px;
     font-size: 18px;
     top: 0;
     left: 0;
   }
-
-  .tab-button span {
+  .button span {
     transform: rotate(90deg);
     white-space: nowrap;
     font-size: 24px;
-    font-family: "Open Sans";
-  }
-
-  .overlay {
-    height: 100%;
   }
 }
-
 @media screen and (min-width: 768px) {
   .scrolling-right {
     position: absolute;
@@ -200,16 +180,7 @@ body {
     width: calc(50% - 80px);
   }
 }
-
 @media only screen and (max-width: 767px) {
-  .tabs {
-    position: fixed;
-    top: 100%;
-    width: 100%;
-    z-index: 2;
-    padding: 75px 0 48px;
-  }
-
   .overlay {
     position: fixed;
     top: 0;
@@ -217,84 +188,30 @@ body {
     bottom: 0;
     width: 100vw;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.6s ease;
-    transition: -webkit-transform 0.6s ease;
-    transition: transform 0.6s ease;
-    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-  }
-
-  .overlay-one {
-    -webkit-transform: none;
     transform: none;
+    background: inherit;
   }
 
-  .overlay-two {
-    -webkit-transform: translateY(100%);
+  .slide {
     transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.6s ease;
-    transition: -webkit-transform 0.6s ease;
     transition: transform 0.6s ease;
-    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
   }
 
-  .overlay-three {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.6s ease;
-    transition: -webkit-transform 0.6s ease;
-    transition: transform 0.6s ease;
-    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-    background: #516548;
-    color: white;
-  }
-
-  .tab-two-in-view .overlay-two {
-    -webkit-transform: none;
+  .in-view .slide {
     transform: none;
-    -webkit-transition: -webkit-transform 0.6s ease;
-    transition: -webkit-transform 0.6s ease;
     transition: transform 0.6s ease;
-    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-  }
-
-  .tab-three-in-view .overlay-three {
-    -webkit-transform: none;
-    transform: none;
-    -webkit-transition: -webkit-transform 0.6s ease;
-    transition: -webkit-transform 0.6s ease;
-    transition: transform 0.6s ease;
-    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-  }
-
-  .tab-content {
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .tab-button {
-    font-family: "Open Sans";
   }
 }
-
 @media screen and (max-width: 767px) {
-  .tab-wrapper {
-    -ms-flex-direction: column;
+  .wrapper {
     flex-direction: column;
   }
 
   .fixed-left {
     position: static;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     height: auto;
     padding: 0;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 100%;
     margin-left: 0px;
@@ -303,11 +220,7 @@ body {
   .inner {
     display: flex;
     padding: 0;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -317,42 +230,25 @@ body {
     width: 100%;
     margin: 0;
     padding: 40px;
-  }
-
-  .scrolling-right {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .h2 {
-    font-size: 21px;
-  }
-
-  .text-box {
     max-width: 100%;
   }
 
-  .scrolling-text {
-    max-width: none;
-    margin-top: 48px;
-  }
-
   .scrolling-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     width: 100%;
     border-top: 1px solid;
     border-left: none;
     border-color: #fff;
+  }
+  .scrolling-right .text {
+    max-width: none;
+    margin-top: 48px;
+  }
+
+  .h2 {
+    font-size: 21px;
   }
 }

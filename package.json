@@ -1,8 +1,7 @@
 {
-  "name": "branches.io37.ch",
-  "version": "1.0.0",
-  "description": "branches.io37.ch",
-  "main": "server.js",
+  "name": "slide-layout",
+  "version": "1.0.1",
+  "description": "slide-layout",
   "dependencies": {
     "css-mqpacker": "^7.0.0",
     "sass": "^1.26.10",
