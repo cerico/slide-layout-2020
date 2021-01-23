@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/31b8ccb9-33ff-48b7-b08a-f85b63eaead7/deploy-status)](https://app.netlify.com/sites/slide-layout/deploys)
+
 # slide-layout-2020
 New Layout
 
