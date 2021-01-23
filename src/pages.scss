@@ -18,7 +18,7 @@
 .fixed-left {
 	position: sticky;
 	top: 0;
-	width: 50%;
+	width: $leftpage;
 	height: 100vh;
 	font-weight: 400;
 }
@@ -67,8 +67,9 @@
 	.scrolling-right {
 		position: absolute;
 		overflow-y: auto;
-		left: 50%;
-		width: calc(50% - 80px);
+    left: $leftpage;
+    --variable-width: #{$rightpage};
+		width: calc(#{$rightpage}  - 80px);
 	}
 }
 @media screen and (max-width:767px) {
