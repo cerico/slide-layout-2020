@@ -9,10 +9,11 @@
   },
   "scripts": {
     "dev": "sergey --watch --port=8200 --exclude=.vscode,*.conf,src",
+    "build": "npm run build:css && sergey --exclude=.vscode,src",
     "netlify": "netlify deploy --prod -d public",
     "sass": "sass --no-source-map src/style.scss files/style.css",
     "mqpacker": "mqpacker -s ./files/style.css ./files/style.css",
-    "build": "npm run sass && npm run mqpacker",
+    "build:css": "npm run sass && npm run mqpacker",
     "start": "sergey --exclude=src,README.md",
     "go": "npm run dev & npm run sass"
   },
