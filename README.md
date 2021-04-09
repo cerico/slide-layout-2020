@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/31b8ccb9-33ff-48b7-b08a-f85b63eaead7/deploy-status)](https://app.netlify.com/sites/slide-layout/deploys) [![Mozilla Observatory](https://img.shields.io/mozilla-observatory/grade/slide-layout.netlify.app)](https://observatory.mozilla.org/analyze/slide-layout.netlify.app) [![Lighthouse Accessibility Badge](https://raw.githubusercontent.com/cerico/lighthouse-scores/main/applications/slide-layout/lighthouse_accessibility.svg)](https://github.com/emazzotta/lighthouse-badges)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/31b8ccb9-33ff-48b7-b08a-f85b63eaead7/deploy-status)](https://app.netlify.com/sites/slide-layout/deploys) [![Mozilla Observatory](https://img.shields.io/mozilla-observatory/grade/slide-layout.netlify.app)](https://observatory.mozilla.org/analyze/slide-layout.netlify.app) [![Lighthouse Accessibility Badge](https://raw.githubusercontent.com/cerico/lighthouse-scores/main/applications/slide-layout.netlify.app/lighthouse_accessibility.svg)](https://raw.githubusercontent.com/cerico/lighthouse-scores/main/README.md)
 
 # slide-layout-2020
 New Layout
